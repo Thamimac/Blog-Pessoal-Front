@@ -1,13 +1,17 @@
 import React from 'react';
 import './Home.css';
 
-function Home(){
+interface myProps{
+    title: string;
+    description: string;
+}
+
+function Home(props:myProps){
     return (
         <>
-            <h1 className='titulo'>Home</h1>
-            <img src= "https://organicsnewsbrasil.com.br/wp-content/uploads/2015/10/natureza.jpg" alt="Imagem Tela Inicial"  className='img'/>
-           
-        </>
+            <h2>{props.title} </h2>
+            <p>{props.description}</p>
+</>
     );
 }
 
